@@ -8,10 +8,9 @@ export default function Contact() {
     <section id="contact" className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="text-5xl lg:text-6xl font-serif font-normal text-gray-900 mb-8">Get In Touch</h2>
+          <h2 className="text-5xl lg:text-6xl font-serif font-normal text-gray-900 mb-8">Partner with Us for a Sustainable Tomorrow</h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            Ready to begin your sustainability journey? Contact our team of climate experts to discuss how we can help
-            your organization achieve its environmental goals.
+            At Decarb, we believe that meaningful change begins with a conversation. Whether you&#39;re looking to enhance your sustainability practices, adopt climate-smart business strategies, or explore decarbonization opportunities — we&#39;re here to support your goals with clear, customized guidance. Our team is ready to collaborate with businesses of all sizes, across sectors, to co-create solutions that are environmentally responsible and economically sound.
           </p>
         </div>
 
@@ -87,7 +86,10 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div className="bg-gray-50 rounded-3xl p-10">
-            <h3 className="text-3xl font-serif text-gray-900 mb-8">Send us a Message</h3>
+            <h3 className="text-3xl font-serif text-gray-900 mb-8">Send Us a Message</h3>
+            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+              Have a query, proposal, or idea you&#39;d like to discuss? Share it with us by filling out the form below. We&#39;ll get back to you promptly.
+            </p>
             <form className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
@@ -106,8 +108,8 @@ export default function Contact() {
 
               <div>
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-3">
-                  Company
-                </label>
+                    Company
+                  </label>
                 <Input id="company" placeholder="Enter your company name" className="h-12" />
               </div>
 

@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 export default function Hero() {
   const images = [
-    "/images/sustainability-1.jpg", // Replace with your image paths
+    "/images/sustainability-1.jpg", 
     "/images/sustainability-2.jpg",
     "/images/sustainability-3.jpg",
   ];

@@ -9,9 +9,7 @@ export default function Navbar() {
 
   const navItems = useMemo(() => [
     { id: "about", label: "About" },
-    { id: "goals", label: "Goals" },
     { id: "details", label: "Services" },
-    { id: "testimonials", label: "Testimonials" },
     { id: "contact", label: "Contact" },
   ], []);
 

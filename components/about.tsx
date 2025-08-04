@@ -1,4 +1,4 @@
-import { Target, Eye, Lightbulb } from "lucide-react"
+import { Target, Eye, Lightbulb, TrendingUp } from "lucide-react" // Added TrendingUp for the extra point
 
 export default function About() {
   return (
@@ -9,8 +9,9 @@ export default function About() {
             About DECARB Climate Research
           </h2>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            We are a sustainability-oriented business advisory firm dedicated to helping organizations navigate the
-            complex landscape of decarbonization and climate action.
+            DECARB is a <b>sustainability-focused business advisory</b> committed to guiding organizations toward
+            environmentally responsible and economically viable growth through expert solutions in carbon management,
+            ESG integration, and green transition strategies.
           </p>
         </div>
 
@@ -50,11 +51,25 @@ export default function About() {
         </div>
 
         <div className="mt-20 text-center">
+          <h3 className="text-3xl font-serif text-gray-900 mb-6">Why Choose DECARB?</h3>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            With deep expertise in climate science, policy, and business strategy, we bridge the gap between
-            environmental necessity and commercial viability, ensuring our clients achieve their sustainability goals
-            effectively.
+            Each engagement with DECARB delivers <b>practical outcomes</b>, whether it&#39;s achieving compliance,
+            improving ESG performance, or driving innovation. Our approach is rooted in deep research,
+            regulatory understanding, and a strong belief in the long-term value of responsible business.
+            We bridge environmental necessity with commercial viability.
           </p>
+          {/* You could add an additional small value proposition here if desired, e.g., for the team aspect */}
+          <div className="mt-8 flex justify-center">
+            <div className="text-center max-w-sm">
+              <div className="w-16 h-16 bg-teal-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="h-8 w-8 text-teal-600" />
+              </div>
+              <h4 className="font-semibold text-gray-900 mb-2">Future-Ready Growth</h4>
+              <p className="text-gray-600 text-sm">
+                Our domain specialists and collaborators align your goals with global sustainability standards, ensuring you remain competitive.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
