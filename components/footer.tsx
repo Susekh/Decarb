@@ -1,5 +1,5 @@
-import Link from "next/link"
-import { Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react"
+import Link from "next/link";
+import { Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -14,11 +14,14 @@ export default function Footer() {
               </div>
               <div className="ml-3 text-base font-bold leading-tight">
                 DECARB CLIMATE
-                <div className="text-xs font-normal text-gray-400 -mt-0.5">RESEARCH</div>
+                <div className="text-xs font-normal text-gray-400 -mt-0.5">
+                  RESEARCH
+                </div>
               </div>
             </div>
             <p className="text-gray-300 leading-relaxed">
-              Leading sustainability advisory firm helping businesses navigate their decarbonization journey.
+              Leading sustainability advisory firm helping businesses navigate
+              their decarbonization journey.
             </p>
             <div className="flex space-x-4 pt-2">
               <Link
@@ -41,28 +44,40 @@ export default function Footer() {
             <h3 className="text-xl font-serif mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li>
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  href="#"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  href="#"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Our Services
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  href="#"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Resources
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-gray-300 hover:text-white transition-colors">
+                <Link
+                  href="#"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
-          
+
           {/* Contact Info */}
           <div>
             <h3 className="text-xl font-serif mb-6">Contact</h3>
@@ -73,14 +88,15 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-teal-500 flex-shrink-0" />
-                <span className="text-gray-300">+91 98765 43210</span>
+                <span className="text-gray-300">+91 9439173220</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-teal-500 flex-shrink-0 mt-1" />
                 <span className="text-gray-300 leading-relaxed">
-                  Climate Research Center
+                  Address: F-2, Chandaka Industrial Estate In front of Infocity,
+                  Infocity Chandrasekharpur, Bhubaneshwar
                   <br />
-                  New Delhi, India 110001
+                  Odisha - 751024
                 </span>
               </div>
             </div>
@@ -90,13 +106,20 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
             <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} DECARB Climate Research. All rights reserved.
+              © {new Date().getFullYear()} DECARB Climate Research. All rights
+              reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+              <Link
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors text-sm"
+              >
                 Privacy Policy
               </Link>
-              <Link href="#" className="text-gray-400 hover:text-white transition-colors text-sm">
+              <Link
+                href="#"
+                className="text-gray-400 hover:text-white transition-colors text-sm"
+              >
                 Terms of Service
               </Link>
             </div>
@@ -104,5 +127,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
