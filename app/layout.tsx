@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   description:
     "DECARB is a leading sustainability advisory firm. We help businesses achieve their climate goals and drive green transition through expert solutions in carbon management, ESG reporting, and strategic planning.",
   icons: {
-    icon: "./favicon.ico",
+    icon: "./favicon.png",
   },
 };
 
