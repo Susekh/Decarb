@@ -15,13 +15,13 @@ const fadeUp = {
 }
 
 const fadeRight = {
-  hidden: { opacity: 0, x: -40 },
-  show: { opacity: 1, x: 0 },
+  hidden: { opacity: 0},
+  show: { opacity: 1 },
 }
 
 const fadeLeft = {
-  hidden: { opacity: 0, x: 40 },
-  show: { opacity: 1, x: 0 },
+  hidden: { opacity: 0 },
+  show: { opacity: 1},
 }
 
 export default function Home() {
