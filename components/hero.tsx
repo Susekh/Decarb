@@ -55,7 +55,7 @@ export default function Hero() {
         {/* Added bg-white, rounded-b-xl and shadow-lg */}
         {/* Main Content */}
         <div className="text-center pt-16 pb-8">
-          <h1 className="text-6xl lg:text-7xl xl:text-8xl font-serif font-normal text-white leading-tight mb-6">
+          <h1 className="text-4xl lg:text-7xl xl:text-8xl font-serif font-normal text-white leading-tight mb-6">
             A sustainability roadmap
             <br />
             for every business.
@@ -81,7 +81,7 @@ export default function Hero() {
           </Button>
         </div>
         {/* Artistic Illustration */}
-        <div className="flex-1 relative">
+        <div className="flex-1 relative mt-10 md:mt-4">
           <svg
             viewBox="0 0 1400 700"
             className="w-full h-full"
