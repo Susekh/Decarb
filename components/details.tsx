@@ -59,7 +59,6 @@ export default function Details() {
         "Regulator & industry engagement",
         "Community engagement strategies",
         "Policy alignment & analysis",
-        "External expectation management",
       ],
     },
   ]
