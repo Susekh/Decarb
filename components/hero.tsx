@@ -25,9 +25,9 @@ export default function Hero() {
   return (
     // Removed bg-white from here to allow carousel to be seen.
     // The white background for the SVG and content is handled below.
-    <section className="pt-20 min-h-screen flex flex-col relative overflow-hidden">
+    <section className="pt-20 min-h-screen mb-8 md:mb-12 flex flex-col relative overflow-hidden">
       {/* Image Carousel Background */}
-      <div className="absolute inset-x-0 top-0 h-[calc(100vh_-_160px)] z-0">
+      <div className="absolute inset-x-0 top-0 h-full z-0">
         {/* Background Images */}
         {images.map((image, index) => (
           <Image
@@ -55,7 +55,7 @@ export default function Hero() {
         {/* Added bg-white, rounded-b-xl and shadow-lg */}
         {/* Main Content */}
         <div className="text-center pt-16 pb-8">
-          <h1 className="text-4xl lg:text-7xl xl:text-8xl font-serif font-normal text-white leading-tight mb-6">
+          <h1 className="text-5xl lg:text-7xl xl:text-8xl font-serif font-normal text-white leading-tight mb-6">
             A sustainability roadmap
             <br />
             for every business.
