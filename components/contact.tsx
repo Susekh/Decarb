@@ -106,7 +106,7 @@ export default function Contact() {
                 goals and discover how we can help your organization become a
                 climate leader.
               </p>
-              <Button className="bg-teal-500 text-white hover:bg-teal-600 w-full py-3 text-lg">
+              <Button className="bg-teal-500 cursor-pointer text-white hover:bg-teal-600 w-full py-3 text-lg">
                 Schedule Free Consultation
               </Button>
             </div>
@@ -218,7 +218,7 @@ export default function Contact() {
 
               <Button
                 type="submit"
-                className="w-full bg-teal-500 text-white hover:bg-teal-600 h-12 text-lg"
+                className="w-full cursor-pointer bg-teal-500 text-white hover:bg-teal-600 h-12 text-lg"
               >
                 Send Message
               </Button>

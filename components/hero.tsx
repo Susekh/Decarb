@@ -1,11 +1,11 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
 export default function Hero() {
   const images = [
-    "/images/sustainability-1.jpg", 
+    "/images/sustainability-1.jpg",
     "/images/sustainability-2.jpg",
     "/images/sustainability-3.jpg",
   ];
@@ -27,31 +27,32 @@ export default function Hero() {
     // The white background for the SVG and content is handled below.
     <section className="pt-20 min-h-screen flex flex-col relative overflow-hidden">
       {/* Image Carousel Background */}
-<div className="absolute inset-x-0 top-0 h-[calc(100vh_-_160px)] z-0">
-  {/* Background Images */}
-  {images.map((image, index) => (
-    <Image
-      height={1000}
-      width={1600}
-      quality={80}
-      key={image}
-      src={image}
-      alt={`Sustainability image ${index + 1}`}
-      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
-        index === currentImageIndex ? "opacity-100" : "opacity-0"
-      }`}
-      priority={index === 0}
-    />
-  ))}
+      <div className="absolute inset-x-0 top-0 h-[calc(100vh_-_160px)] z-0">
+        {/* Background Images */}
+        {images.map((image, index) => (
+          <Image
+            height={1000}
+            width={1600}
+            quality={80}
+            key={image}
+            src={image}
+            alt={`Sustainability image ${index + 1}`}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+              index === currentImageIndex ? "opacity-100" : "opacity-0"
+            }`}
+            priority={index === 0}
+          />
+        ))}
 
-  {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-black/40" />
-</div>
-
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-black/40" />
+      </div>
 
       {/* Main Content and Artistic Illustration Container */}
       {/* This div now acts as the white background for your content and SVG */}
-      <div className="bg-transparent max-w-7xl mx-auto px-6 lg:px-8 flex-1 flex flex-col relative z-10 w-full rounded-b-xl shadow-lg"> {/* Added bg-white, rounded-b-xl and shadow-lg */}
+      <div className="bg-transparent max-w-7xl mx-auto px-6 lg:px-8 flex-1 flex flex-col relative z-10 w-full rounded-b-xl">
+        {" "}
+        {/* Added bg-white, rounded-b-xl and shadow-lg */}
         {/* Main Content */}
         <div className="text-center pt-16 pb-8">
           <h1 className="text-6xl lg:text-7xl xl:text-8xl font-serif font-normal text-white leading-tight mb-6">
@@ -79,14 +80,17 @@ export default function Hero() {
             </svg>
           </Button>
         </div>
-
         {/* Artistic Illustration */}
         <div className="flex-1 relative">
-          <svg viewBox="0 0 1400 700" className="w-full h-full" style={{ minHeight: "500px" }}>
+          <svg
+            viewBox="0 0 1400 700"
+            className="w-full h-full"
+            style={{ minHeight: "300px" }}
+          >
             {/* Sky Background - Make this transparent if you want carousel behind it */}
             {/* If you remove this rect, the carousel will be visible through the sky */}
-            <rect width="1400" height="500" fill="transparent" /> {/* Changed to transparent */}
-
+            <rect width="1400" height="500" fill="transparent" />{" "}
+            {/* Changed to transparent */}
             {/* Clouds - Hand drawn style */}
             <g opacity="0.7">
               {/* Left cloud cluster */}
@@ -106,10 +110,25 @@ export default function Hero() {
               />
 
               {/* Small cloud */}
-              <ellipse cx="1100" cy="150" rx="60" ry="25" fill="white" stroke="#e2e8f0" strokeWidth="1" />
-              <ellipse cx="1120" cy="145" rx="40" ry="18" fill="white" stroke="#e2e8f0" strokeWidth="1" />
+              <ellipse
+                cx="1100"
+                cy="150"
+                rx="60"
+                ry="25"
+                fill="white"
+                stroke="#e2e8f0"
+                strokeWidth="1"
+              />
+              <ellipse
+                cx="1120"
+                cy="145"
+                rx="40"
+                ry="18"
+                fill="white"
+                stroke="#e2e8f0"
+                strokeWidth="1"
+              />
             </g>
-
             {/* Mountains/Hills - Hand drawn style */}
             <path
               d="M0,400 Q100,350 200,370 Q300,340 400,360 Q500,330 600,350 Q700,320 800,340 Q900,310 1000,330 Q1100,300 1200,320 Q1300,290 1400,310 L1400,500 L0,500 Z"
@@ -117,12 +136,19 @@ export default function Hero() {
               stroke="#e2e8f0"
               strokeWidth="2"
             />
-
             {/* Wind Turbines - Hand drawn style */}
             <g>
               {/* Turbine 1 */}
               <g transform="translate(250,280)">
-                <line x1="0" y1="0" x2="0" y2="120" stroke="#374151" strokeWidth="3" strokeLinecap="round" />
+                <line
+                  x1="0"
+                  y1="0"
+                  x2="0"
+                  y2="120"
+                  stroke="#374151"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                />
                 <circle cx="0" cy="0" r="5" fill="#374151" />
                 {/* Blades */}
                 <path
@@ -150,7 +176,15 @@ export default function Hero() {
 
               {/* Turbine 2 */}
               <g transform="translate(400,260)">
-                <line x1="0" y1="0" x2="0" y2="140" stroke="#374151" strokeWidth="3" strokeLinecap="round" />
+                <line
+                  x1="0"
+                  y1="0"
+                  x2="0"
+                  y2="140"
+                  stroke="#374151"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                />
                 <circle cx="0" cy="0" r="5" fill="#374151" />
                 {/* Blades */}
                 <path
@@ -178,7 +212,15 @@ export default function Hero() {
 
               {/* Turbine 3 */}
               <g transform="translate(550,270)">
-                <line x1="0" y1="0" x2="0" y2="130" stroke="#374151" strokeWidth="3" strokeLinecap="round" />
+                <line
+                  x1="0"
+                  y1="0"
+                  x2="0"
+                  y2="130"
+                  stroke="#374151"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                />
                 <circle cx="0" cy="0" r="5" fill="#374151" />
                 {/* Blades */}
                 <path
@@ -204,12 +246,16 @@ export default function Hero() {
                 />
               </g>
             </g>
-
             {/* Trees - Hand drawn organic style */}
             <g>
               {/* Left tree cluster */}
               <g transform="translate(80,320)">
-                <path d="M0,0 L0,80" stroke="#4a5568" strokeWidth="4" strokeLinecap="round" />
+                <path
+                  d="M0,0 L0,80"
+                  stroke="#4a5568"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                />
                 <path
                   d="M-20,-10 Q-25,-40 -15,-50 Q0,-60 15,-50 Q25,-40 20,-10 Q15,0 0,5 Q-15,0 -20,-10 Z"
                   fill="#065f46"
@@ -225,7 +271,12 @@ export default function Hero() {
               </g>
 
               <g transform="translate(120,330)">
-                <path d="M0,0 L0,70" stroke="#4a5568" strokeWidth="3" strokeLinecap="round" />
+                <path
+                  d="M0,0 L0,70"
+                  stroke="#4a5568"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                />
                 <path
                   d="M-15,-5 Q-20,-30 -10,-40 Q0,-50 10,-40 Q20,-30 15,-5 Q10,5 0,10 Q-10,5 -15,-5 Z"
                   fill="#065f46"
@@ -236,7 +287,12 @@ export default function Hero() {
 
               {/* Right tree cluster */}
               <g transform="translate(1200,310)">
-                <path d="M0,0 L0,90" stroke="#4a5568" strokeWidth="4" strokeLinecap="round" />
+                <path
+                  d="M0,0 L0,90"
+                  stroke="#4a5568"
+                  strokeWidth="4"
+                  strokeLinecap="round"
+                />
                 <path
                   d="M-25,-15 Q-30,-45 -20,-55 Q0,-65 20,-55 Q30,-45 25,-15 Q20,-5 0,0 Q-20,-5 -25,-15 Z"
                   fill="#065f46"
@@ -252,7 +308,12 @@ export default function Hero() {
               </g>
 
               <g transform="translate(1280,325)">
-                <path d="M0,0 L0,75" stroke="#4a5568" strokeWidth="3" strokeLinecap="round" />
+                <path
+                  d="M0,0 L0,75"
+                  stroke="#4a5568"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                />
                 <path
                   d="M-18,-8 Q-23,-35 -13,-45 Q0,-55 13,-45 Q23,-35 18,-8 Q13,2 0,7 Q-13,2 -18,-8 Z"
                   fill="#065f46"
@@ -262,7 +323,12 @@ export default function Hero() {
               </g>
 
               <g transform="translate(1320,340)">
-                <path d="M0,0 L0,60" stroke="#4a5568" strokeWidth="3" strokeLinecap="round" />
+                <path
+                  d="M0,0 L0,60"
+                  stroke="#4a5568"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                />
                 <path
                   d="M-12,-5 Q-17,-25 -7,-35 Q0,-45 7,-35 Q17,-25 12,-5 Q7,5 0,10 Q-7,5 -12,-5 Z"
                   fill="#065f46"
@@ -271,13 +337,48 @@ export default function Hero() {
                 />
               </g>
             </g>
-
             {/* Solar Panel Farm - Hand drawn */}
             <g transform="translate(750,350)">
-              <rect x="0" y="0" width="50" height="25" fill="#1f2937" stroke="#374151" strokeWidth="1" rx="2" />
-              <rect x="55" y="0" width="50" height="25" fill="#1f2937" stroke="#374151" strokeWidth="1" rx="2" />
-              <rect x="110" y="0" width="50" height="25" fill="#1f2937" stroke="#374151" strokeWidth="1" rx="2" />
-              <rect x="165" y="0" width="50" height="25" fill="#1f2937" stroke="#374151" strokeWidth="1" rx="2" />
+              <rect
+                x="0"
+                y="0"
+                width="50"
+                height="25"
+                fill="#1f2937"
+                stroke="#374151"
+                strokeWidth="1"
+                rx="2"
+              />
+              <rect
+                x="55"
+                y="0"
+                width="50"
+                height="25"
+                fill="#1f2937"
+                stroke="#374151"
+                strokeWidth="1"
+                rx="2"
+              />
+              <rect
+                x="110"
+                y="0"
+                width="50"
+                height="25"
+                fill="#1f2937"
+                stroke="#374151"
+                strokeWidth="1"
+                rx="2"
+              />
+              <rect
+                x="165"
+                y="0"
+                width="50"
+                height="25"
+                fill="#1f2937"
+                stroke="#374151"
+                strokeWidth="1"
+                rx="2"
+              />
 
               {/* Grid lines */}
               <g stroke="#4b5563" strokeWidth="0.5">
@@ -291,19 +392,66 @@ export default function Hero() {
                 <line x1="198" y1="0" x2="198" y2="25" />
               </g>
             </g>
-
             {/* Hot Air Balloon - Colored accent like in reference */}
             <g transform="translate(600,150)">
-              <ellipse cx="0" cy="0" rx="35" ry="45" fill="#dc2626" stroke="#b91c1c" strokeWidth="2" />
+              <ellipse
+                cx="0"
+                cy="0"
+                rx="35"
+                ry="45"
+                fill="#dc2626"
+                stroke="#b91c1c"
+                strokeWidth="2"
+              />
               <ellipse cx="0" cy="-5" rx="30" ry="35" fill="#ef4444" />
-              <path d="M-25,35 Q-20,45 -10,50 Q0,55 10,50 Q20,45 25,35" stroke="#8b5cf6" strokeWidth="2" fill="none" />
-              <rect x="-8" y="50" width="16" height="12" fill="#8b4513" stroke="#654321" strokeWidth="1" />
-              <line x1="-25" y1="35" x2="-8" y2="50" stroke="#4a5568" strokeWidth="1" />
-              <line x1="25" y1="35" x2="8" y2="50" stroke="#4a5568" strokeWidth="1" />
-              <line x1="-15" y1="40" x2="-4" y2="50" stroke="#4a5568" strokeWidth="1" />
-              <line x1="15" y1="40" x2="4" y2="50" stroke="#4a5568" strokeWidth="1" />
+              <path
+                d="M-25,35 Q-20,45 -10,50 Q0,55 10,50 Q20,45 25,35"
+                stroke="#8b5cf6"
+                strokeWidth="2"
+                fill="none"
+              />
+              <rect
+                x="-8"
+                y="50"
+                width="16"
+                height="12"
+                fill="#8b4513"
+                stroke="#654321"
+                strokeWidth="1"
+              />
+              <line
+                x1="-25"
+                y1="35"
+                x2="-8"
+                y2="50"
+                stroke="#4a5568"
+                strokeWidth="1"
+              />
+              <line
+                x1="25"
+                y1="35"
+                x2="8"
+                y2="50"
+                stroke="#4a5568"
+                strokeWidth="1"
+              />
+              <line
+                x1="-15"
+                y1="40"
+                x2="-4"
+                y2="50"
+                stroke="#4a5568"
+                strokeWidth="1"
+              />
+              <line
+                x1="15"
+                y1="40"
+                x2="4"
+                y2="50"
+                stroke="#4a5568"
+                strokeWidth="1"
+              />
             </g>
-
             {/* Electric Vehicle - Hand drawn */}
             <g transform="translate(450,380)">
               <path
@@ -312,15 +460,60 @@ export default function Hero() {
                 stroke="#059669"
                 strokeWidth="1"
               />
-              <circle cx="15" cy="30" r="8" fill="#374151" stroke="#1f2937" strokeWidth="1" />
-              <circle cx="65" cy="30" r="8" fill="#374151" stroke="#1f2937" strokeWidth="1" />
-              <rect x="8" y="2" width="12" height="8" fill="white" opacity="0.8" stroke="#d1d5db" strokeWidth="0.5" />
-              <rect x="25" y="2" width="12" height="8" fill="white" opacity="0.8" stroke="#d1d5db" strokeWidth="0.5" />
-              <rect x="42" y="2" width="12" height="8" fill="white" opacity="0.8" stroke="#d1d5db" strokeWidth="0.5" />
+              <circle
+                cx="15"
+                cy="30"
+                r="8"
+                fill="#374151"
+                stroke="#1f2937"
+                strokeWidth="1"
+              />
+              <circle
+                cx="65"
+                cy="30"
+                r="8"
+                fill="#374151"
+                stroke="#1f2937"
+                strokeWidth="1"
+              />
+              <rect
+                x="8"
+                y="2"
+                width="12"
+                height="8"
+                fill="white"
+                opacity="0.8"
+                stroke="#d1d5db"
+                strokeWidth="0.5"
+              />
+              <rect
+                x="25"
+                y="2"
+                width="12"
+                height="8"
+                fill="white"
+                opacity="0.8"
+                stroke="#d1d5db"
+                strokeWidth="0.5"
+              />
+              <rect
+                x="42"
+                y="2"
+                width="12"
+                height="8"
+                fill="white"
+                opacity="0.8"
+                stroke="#d1d5db"
+                strokeWidth="0.5"
+              />
               {/* Lightning bolt */}
-              <path d="M60,15 L65,10 L62,15 L67,20 L62,15 Z" fill="#fbbf24" stroke="#f59e0b" strokeWidth="0.5" />
+              <path
+                d="M60,15 L65,10 L62,15 L67,20 L62,15 Z"
+                fill="#fbbf24"
+                stroke="#f59e0b"
+                strokeWidth="0.5"
+              />
             </g>
-
             {/* Organic ground line */}
             <path
               d="M0,400 Q200,390 400,395 Q600,385 800,390 Q1000,380 1200,385 Q1300,380 1400,385"
@@ -329,7 +522,6 @@ export default function Hero() {
               fill="none"
               strokeDasharray="8,4"
             />
-
             {/* Foreground rolling hills */}
             <path
               d="M0,500 Q200,480 400,485 Q600,475 800,480 Q1000,470 1200,475 Q1300,470 1400,475 L1400,700 L0,700 Z"

@@ -14,7 +14,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "DECARB Climate Research | Sustainability & Decarbonization Advisory",
-  description: "DECARB is a leading sustainability advisory firm. We help businesses achieve their climate goals and drive green transition through expert solutions in carbon management, ESG reporting, and strategic planning.",
+  description:
+    "DECARB is a leading sustainability advisory firm. We help businesses achieve their climate goals and drive green transition through expert solutions in carbon management, ESG reporting, and strategic planning.",
+  icons: {
+    icon: "./favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -23,12 +27,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <>
+      <head>
+        <link rel="icon" href="./favicon.png" sizes="any" />
+      </head>
+      <html lang="en">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          {children}
+        </body>
+      </html>
+    </>
   );
 }

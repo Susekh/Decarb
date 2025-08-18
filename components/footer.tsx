@@ -1,16 +1,22 @@
 import Link from "next/link";
 import { Linkedin, Twitter, Mail, Phone, MapPin } from "lucide-react";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="max-w-6xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="flex flex-wrap justify-between">
           {/* Company Info & Socials */}
           <div className="space-y-6">
             <div className="flex items-center">
-              <div className="w-8 h-8 bg-teal-500 rounded-sm flex items-center justify-center">
-                <div className="w-4 h-4 bg-white rounded-sm"></div>
+              <div className="w-12 h-12 rounded-sm flex items-center justify-center">
+                <Image
+                  height={100}
+                  width={100}
+                  alt="Decarb Climate Research icon"
+                  src={"/favicon.png"}
+                />
               </div>
               <div className="ml-3 text-base font-bold leading-tight">
                 DECARB CLIMATE
@@ -19,7 +25,7 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <p className="text-gray-300 leading-relaxed">
+            <p className="text-gray-300 max-w-xl leading-relaxed">
               Leading sustainability advisory firm helping businesses navigate
               their decarbonization journey.
             </p>
@@ -45,7 +51,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="#"
+                  href="#about"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   About Us
@@ -53,7 +59,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="#details"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   Our Services
@@ -61,15 +67,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  Resources
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
+                  href="#contact"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
                   Contact
@@ -79,7 +77,7 @@ export default function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div>
+          {/* <div>
             <h3 className="text-xl font-serif mb-6">Contact</h3>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
@@ -100,16 +98,16 @@ export default function Footer() {
                 </span>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-400 mx-auto text-sm">
               © {new Date().getFullYear()} DECARB Climate Research. All rights
               reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
+            {/* <div className="flex space-x-6 mt-4 md:mt-0">
               <Link
                 href="#"
                 className="text-gray-400 hover:text-white transition-colors text-sm"
@@ -122,7 +120,7 @@ export default function Footer() {
               >
                 Terms of Service
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@ import { Target, Eye, Lightbulb, TrendingUp } from "lucide-react" // Added Trend
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-white">
+    <section id="about" className=" bg-white">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-5xl lg:text-6xl font-serif font-normal text-gray-900 mb-8">
